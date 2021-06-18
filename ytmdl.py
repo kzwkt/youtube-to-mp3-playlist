@@ -39,6 +39,7 @@ def verifyFormat(fileFormat):
 # downloadPrompt: Prompts the user for a link to the youtube-playlist
 def downloadPrompt():
 	playlist = input("Enter the playlist URL: ")
+	#os.chdir("/home/kai/Music") # to download to Music dir 
 	location = verifyFolder(input("Enter a folder name for the playlist: "))
 	print("Downloading...")
 	subprocess.run(["youtube-dl", "-x", playlist], cwd=os.getcwd() + "/" + location)
