@@ -62,11 +62,6 @@ def convertAlbum(location):
 			subprocess.run(["ffmpeg", "-loglevel", "panic", "-i", song, songData[0] + "." + albumFormat])
 			print("Removing " + song)
 			subprocess.run(["rm", song])
-
-	songs = os.listdir()
-	for song in songs:
-			subprocess.run(["rm", song])
-			subprocess.run(["mv", "new-" + song, song])
 	os.chdir("..")
 
 
